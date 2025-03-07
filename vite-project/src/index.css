@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  text-decoration: none;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.app-logo-container_login{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body{
+  overflow-x: hidden;
+}
