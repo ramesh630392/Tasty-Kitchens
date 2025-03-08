@@ -28,7 +28,7 @@ export const Cart = () => {
 
     const ItemsCart = () =>(
         <section className='min-h-[80vh]' >
-            <div className='w-[70vw] h-[70vh] bg-blue-100 rounded mx-auto mt-2 h-auto translate-y-10'>
+            <div className='w-[85vw] min-h-[35vh] mb-3 max-h-auto bg-blue-100 rounded mx-auto mt-2 h-auto translate-y-10'>
                 <div className=' hidden  mx-auto w-[90%] sm:flex sm:block   ' >
                     <div className="w-[40%]">
                     <p className='mx-auto w-[30%] mx-auto '>Item</p>
@@ -66,7 +66,7 @@ export const Cart = () => {
                         <p className='text-[#3E4C59] flex font-[DMSans] ml-auto mr-5 sm:ml-[65%] text-md '><FaIndianRupeeSign className='mt-1' />{cartValue}</p>
                     </div>
                     <div className='w-[95%] ml-auto mb-2 mt-2'>
-                    <button type='button' onClick={()=>{setPayment(true)}} className='bg-[#FFA412] text-[#FFFF] font-[DMSans] rounded px-2 mx-[73%] flex mr-5 mb-5' >Place Order</button>
+                    <button type='button' onClick={()=>{setPayment(true)}} className='bg-[#FFA412] text-[#FFFF] font-[DMSans] rounded px-2 ml-[50%] mr-5 w-30 sm:mx-[73%]' >Place Order</button>
                     </div>
             </div>
         </section>
@@ -74,7 +74,7 @@ export const Cart = () => {
 
     const PaymentDoneSection = () =>(
         <section className='h-[90vh] w-[100vw]  flex-col text-center justify-center items-center' >
-            <div className='flex justify-center mt-[10%] tick'>
+            <div className='flex justify-center mt-[20%] tick'>
                 <svg width="80" height="80" viewBox="0 0 80 80"  fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"  d="M39.9998 72.001C57.673 72.001 71.9998 57.6742 71.9998 40.001C71.9998 22.3279 57.673 8.00098 39.9998 8.00098C22.3266 8.00098 7.99976 22.3279 7.99976 40.001C7.99976 57.6742 22.3266 72.001 39.9998 72.001ZM54.8282 34.8294C56.3902 33.2673 56.3902 30.7347 54.8282 29.1725C53.2662 27.6105 50.7334 27.6105 49.1714 29.1725L35.9998 42.3442L30.8282 37.1725C29.2661 35.6105 26.7334 35.6105 25.1713 37.1725C23.6092 38.7347 23.6092 41.2674 25.1713 42.8294L33.1713 50.8294C34.7334 52.3914 37.2661 52.3914 38.8282 50.8294L54.8282 34.8294Z" fill="#22C55E"/>
                 </svg>
@@ -100,6 +100,7 @@ export const Cart = () => {
     <div>
         <Navbar/>
         {cart.length === 0 ? <CartZero/> :(!payment ? <ItemsCart/>: <PaymentDoneSection/>)}
+        <div className="h-20 mb-2"></div>
         <Footer/>
     </div>
   )

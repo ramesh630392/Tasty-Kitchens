@@ -40,7 +40,6 @@ export const EachRestaurant = () => {
             });
             if (response.ok){
                 const data = await response.json();
-                console.log(data)
                 const details = {name: data.name, costForTwo: data.cost_for_two, imageUrl:data.image_url, cuisine: data.cuisine, location: data.location, rating: data.rating, reviews: data.reviews_count}
                 setData(details);
                 setItems(data.food_items.map(item =>({...item, count: findItem(item.id) })))
